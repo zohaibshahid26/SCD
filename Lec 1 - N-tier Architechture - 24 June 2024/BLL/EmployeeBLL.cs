@@ -21,5 +21,10 @@ namespace BLL
         { 
         return salary*.20M;
         }
+
+        public List<EmployeeDTO> GetEmployees() {
+            EmployeeDAL employeeDAL = new EmployeeDAL();
+            return employeeDAL.GetEmployees();
+        }
     }
 }

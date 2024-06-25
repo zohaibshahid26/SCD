@@ -21,10 +21,15 @@ namespace PL
             employee.Salary = decimal.Parse( salary);
             EmployeeBLL employeeBLL = new EmployeeBLL();
             employeeBLL.Save(employee);
-
-
-        
-        
+        }
+        public void DisplayEmployees() {
+            EmployeeBLL employeeBLL = new EmployeeBLL();
+            List<EmployeeDTO> employees = employeeBLL.GetEmployees();
+            foreach (EmployeeDTO employee in employees) {
+                Console.WriteLine("Name: "+employee.Name);
+                Console.WriteLine("Salary: "+employee.Salary);
+                Console.WriteLine("Tax: "+employee.Tax);
+            }
         }
     }
 }
