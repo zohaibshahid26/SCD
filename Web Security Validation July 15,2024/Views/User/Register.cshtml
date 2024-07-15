@@ -1,0 +1,29 @@
+﻿@model WebApplication1.Models.User;
+
+<h1>   Registration  </h1>
+
+<form asp-action="Register" asp-controller="User" method="post">
+
+    <div>
+
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+       
+
+    </div>
+
+    <div>
+
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+        <button type="submit">Register</button>
+
+    </div>
+
+</form>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
